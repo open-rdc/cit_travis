@@ -38,8 +38,7 @@ install: # Use this to install any prerequisites or dependencies necessary to ru
 - cd ~/ros/catkin_ws/src
 - wstool init .
 # Download non-debian stuff
-- wstool merge https://raw.githubusercontent.com/open-rdc/icart_mini_ros_pkgs/indigo-devel/icart_mini_ros_pkgs.install
-- wstool update
+- git clone https://github.com/open-rdc/icart_mini
 # Delete the moveit.rosinstall version of this repo and use the one of the branch we are testing
 - rm -rf $REPOSITORY_NAME
 - ln -s $CI_SOURCE_PATH . # Link the repo we are testing to the new workspace
